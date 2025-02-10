@@ -4,7 +4,8 @@ function loadGame(game) {
     document.getElementById('game-container').style.display = 'block';
 
     // Load the selected game into the iframe
-    document.getElementById('game-frame').src = `games/${game}/index.html`;
+    const gameFrame = document.getElementById('game-frame');
+    gameFrame.src = `games/${game}/index.html`;
 }
 
 function toggleFullscreen() {
@@ -25,6 +26,6 @@ function goHome() {
     document.getElementById('game-container').style.display = 'none';
     document.getElementById('home-page').style.display = 'block';
     
-    // Stop the game by resetting the iframe
+    // Stop the game by resetting the iframe src
     document.getElementById('game-frame').src = '';
 }
