@@ -1,6 +1,10 @@
 function loadGame(game) {
-    document.getElementById('game-frame').src = `games/${game}/index.html`;
+    // Hide the home page and show the game container
+    document.getElementById('home-page').style.display = 'none';
     document.getElementById('game-container').style.display = 'block';
+
+    // Load the selected game into the iframe
+    document.getElementById('game-frame').src = `games/${game}/index.html`;
 }
 
 function toggleFullscreen() {
@@ -14,4 +18,13 @@ function toggleFullscreen() {
     } else if (iframe.msRequestFullscreen) {
         iframe.msRequestFullscreen();
     }
+}
+
+function goHome() {
+    // Hide the game container and show the home page
+    document.getElementById('game-container').style.display = 'none';
+    document.getElementById('home-page').style.display = 'block';
+    
+    // Stop the game by resetting the iframe
+    document.getElementById('game-frame').src = '';
 }
