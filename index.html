@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Game Hub</h1>
+    <div id="game-list">
+        <button onclick="loadGame('game1')">Game 1</button>
+        <button onclick="loadGame('game2')">Game 2</button>
+    </div>
+
+    <div id="game-container">
+        <iframe id="game-frame"></iframe>
+        <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
