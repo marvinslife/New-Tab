@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Home Page -->
     <div id="home-page">
         <h1>Game Hub</h1>
         <div id="game-list">
+            <!-- Game Buttons -->
             <button onclick="loadGame('game1')">Game 1</button>
             <button onclick="loadGame('game2')">Game 2</button>
             <button onclick="loadGame('game3')">Game 3</button>
@@ -33,6 +35,7 @@
         </div>
     </div>
 
+    <!-- Game Container -->
     <div id="game-container" style="display: none;">
         <iframe id="game-frame"></iframe>
         <button id="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
